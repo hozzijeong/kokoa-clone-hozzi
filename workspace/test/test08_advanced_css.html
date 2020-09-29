@@ -1,0 +1,92 @@
+<!-- 
+    transition : 애니메이션임. 단 state에 따라 바뀌는 속성(property)이 있으면 됨. 즉, state를 설정하는 구문에 애니메이션을 
+    적용하는 특성이라 보면 됨.  따라서, transition에서 바꾸고 싶은 것들은 state설정에 설정을 해 놓은 기능들만 애니메이션 적용이 가능함
+    all 을 통해 state 상태에서 변화하는 모든 형태에 적용이 가능하기도 하고, 따로따로 설정이 가능하기도 함. 
+      a {
+        color: wheat;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        transition: all 3s ease-in-out;
+      }
+      a:hover {
+        border-radius: 30px;
+        font-size: 10px;
+        color: tomato;
+        background-color: wheat;
+      }
+
+    3D로 돌아감.
+    transformation은 box element를 변형시키지 않음. 
+    margin, padding이 적용되지 않음. 일종의 3D transformation임 "픽셀"을 변형시키는 것임. 
+
+    애니메이션 추가하는 방법
+    @keyframe 애니메이션 이름{
+        from{
+            transform~
+        }
+        to{
+            transform~
+        }
+        2단계로만 나눌 때
+        or
+        2단계 초과 일 때
+        단계별로 나눌 수 있음 (0% ~ 100% 까지)
+        0%{
+            시작
+        }
+        ~
+        100%{
+            끝
+        }
+    }
+
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head lang="kr">
+    <meta charset="utf-8" />
+    <title>test08</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      @keyframes myAni {
+        0% {
+          transform: rotateZ(0deg);
+        }
+        25% {
+          transform: scale(2);
+        }
+        50% {
+          transform: rotateZ(270deg) translateX(100px);
+        }
+        75% {
+          transform: scale(3);
+        }
+        100% {
+          transform: rotateZ(0deg) translateX(0px);
+        }
+      }
+      img {
+        border: 5px solid #000000;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        animation: myAni 3s infinite ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/ITunes_logo.svg/1019px-ITunes_logo.svg.png"
+      alt="img"
+    />
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!--
+    https://developer.mozilla.org/ko/docs/Web/HTML/Element
+    -> html 속성들을 알려주는 참고 사이트
+
+     <form>	HTML <form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타냅니다. 
+     <input> HTML <input> 요소는 웹 기반 양식에서 사용자의 데이터를 받을 수 있는 대화형 컨트롤을 생성합니다.
+    
+    각자의 기능에 맞춰서 attribute(특성)을 용도에 맞게 사용하면 정말 좋음! 
+    attribute 적용하는게 제일 중요함.
+
+
+
+    ex)
+    <tagmane attrname="attrvalue" content> </tagname>
+    주로 위와같은 형식으로 나타나면 됨. 
+
+    lable은 input과 함께 움직여야함. 
+    label -> for attr
+    input -> id attr 
+    if for.value = id.value then work!
+
+    type 에는 많은 값들(유형)이 들어 갈 수 있음
+    url, e-mail 등등의 형식
+
+    id는 body안에 있는 어떤 태그에도 넣을 수 있음. 약간 안드로이드에 뷰 마다 주는 id 느낌? 
+    id의 값은 유일해야함.
+
+    div(division)
+        기능별로 구분을 해주는 덩어리, 경계선 느낌.
+        같은 속성을 적용할 것들만 div태그로 묶고, 아닌 것은 다른 div 로 분할해서 묶는다.
+        기능은 없음
+
+    header
+        div를 대체할 수 있는 태그, 박스 가능을 담당함. 
+        그저 header라는 이름으로 제목이라는 것을 짐작 할 수 있도록 설정
+
+    main
+        div를 대체할 수 있음. 그저, 주요 내용이라는 것을 암시하는 태그
+    
+    footer
+        div를 대체할 수 있는 태그, 하지만 머리 가슴 다리 식으로 나누어서 가독성을 높여주는 역할을 함. 
+
+
+    html에 CSS를 추가하는 방법
+    1. html 코드가 있는 파일에 CSS 코드를 추가하는 방법
+        1-1. <style>
+            여기 안에 스타일을 추가하는 것. 
+        </style>
+    2. html 과 CSS를 분리하는 방법. 
+        2-1. css파일을 따로 만든 다음에
+        <link href = "path of css file" rel = "stylesheet">
+        위와 같은 방식으로 링크를 추가할 수 있음. 
+
+    1 과 2 방법 중 2번 방법을 더 많이 사용함. 2번은 활용도가 더 높음. 약간 자바에서 클래스를 따로 하나 만들어주는 느낌.
+
+
+    -->
+
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home- Test02</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      h1 {
+        color: #ff0000;
+        text-decoration: underline;
+        font-size: 20px;
+      }
+      form {
+        color: #00ff00;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is Title</h1>
+
+    <form>
+      <label for="profile">Profile Photo</label>
+      <input id="profile" type="file" accept=".png" />
+      <label for="first-name">First Name</label>
+      <input id="first-name" required placeholder="Name" type="text" />
+      <input required placeholder="LastName" type="text" />
+      <input required placeholder="UserName" minlength="5" type="text" />
+      <input required placeholder="Password" type="password" />
+      <input type="submit" value="Create Account" />
+    </form>
+  </body>
+</html>

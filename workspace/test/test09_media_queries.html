@@ -1,0 +1,43 @@
+<!-- 
+    CSS를 통해 기기의 상태를 확인하고 코드의 조건을 추가하는 방식. "and" 를 통해 차례를 넘길 수 있음.   
+    @media screen and(넓이 구간 설정 or 조건 설정) -> 일반 screen일 때 조건 설정.  
+    @media print -> print하려고 할 때 조건 설정
+ -->
+
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      span {
+        font-size: 36px;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+      }
+      @media screen and (min-width: 600px) and (max-width: 1000px) {
+        div {
+          background-color: yellowgreen;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        span {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <span>please flip your phone :( </span>
+  </body>
+</html>

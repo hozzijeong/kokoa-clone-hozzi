@@ -1,0 +1,94 @@
+<!-- 
+    필수! html파일은 아래와 같이 시작해야 함 && html의 구조는 아래와 같음
+    <!DOCTYPE html>
+    <html>
+        <head>
+
+            주로 설정을 하는 곳
+            사이트의 정보를 브라우저에 알려주는 용도로 사용됨. 
+
+        </head>
+
+        <body>
+
+            여기 안에 이제 웹 관련 내용들을 전부 넣어주면 됨. 
+            ex) 위에서 적은 내용들 (content.)
+            
+        </body>
+    </html>
+-->
+
+<!-- html 태그: 약간 안에 있는 콘텐츠가 무엇인지 정의 해주는 하나의 약속? 
+태그는 반드시 <smt> </smt> 의 형식으로 열고 닫혀야 함. 연채로 닫지 않으면, 모든 것에 적용이 됨.  -->
+<!DOCTYPE html>
+<html lang="kr">
+  <!-- meta 태그: 부가적인 정보. 표현 할 수 없는 다양한 종류를 나타냄.
+        2개의 attribute -> name / content
+        
+        charset-> 이거 중요함 웹에서 어떻게 언어 처리할 줄 알려주는 주용한 태그임)
+
+    -->
+  <head>
+    <link
+      rel="shorcut icon"
+      sizes="16x16 32x32 64x64"
+      href="https://nomadcoders.co/m.png"
+    />
+    <title>Home - My first Website</title>
+    <meta name="discription" content="This is my Website" />
+    <meta charset="utf=8" />
+  </head>
+
+  <body>
+    <h1>Hello this is my Website</h1>
+    <h2>Hello this is my Website</h2>
+    <h3>Hello this is my Website</h3>
+    <h4>Hello this is my Website</h4>
+    <h5>Hello this is my Website</h5>
+    <h6>Hello this is my Website</h6>
+
+    <!--
+            리스트
+            ul : unordered list-> 순서가 없는 리스트
+            li: listitem-> 리스트의 아이템 요소를 결정지어 주는 태그
+            ol: ordered list -> 순서가 정해진 리스트(1,2,3,4.. 와 같은 방식으로 나타남.)
+            -->
+
+    <ol>
+      <li>가</li>
+      <li>나</li>
+      <li>다</li>
+      <li>라</li>
+    </ol>
+
+    <!--
+        a 태그: anchor -> 다른 웹사이트로 이동하는 태그 (link 첨부)
+            a 태그는 부가적인 정보가 필요함. (attribute가 필요)
+            href : 어디로 갈지 알려주는 부가 정보 태그 (href는 a태그에만 사용 가능함 그리고 항상 띄어쓰기를 해야 함)
+            target: 기본값은 _self(해당 브라우저에서 링크로 이동)/ blank(새로운 탭을 만들어서 이동)
+
+        img 태그: 다른 태그들과 다르게 태그를 닫아주는 기능이 없음.(알아서 닫힘/self closing tag) 이미지는 텍스트 구성이 아니라 사진이기 때문.
+        local 이미지 -> 반드시 같은 패키지(파일)안에 들어가 있어야 함. 그게 아니면 경로를 적어줘야 이미지 접근 가능.  
+        -->
+    <a>Go to google.com</a>
+    <a href="http://google.com">Go to google.com</a>
+    <br />
+    <a href="http://google.com" target="_blank">Go to google.com</a>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSLRDqGqIPSQc6K9p6nB0Ez2Q1r5krdMT7aPQ&usqp=CAU"
+    />
+    <p>MY name is Nsa <abbr title="good luck">Nsa</abbr></p>
+    <cite>site</cite>
+    <code>code</code>
+    <p>I like to live in <sup>Suwon</sup></p>
+
+    <nav class="crumbs">
+      <ol>
+        <li class="crumb"><a href="bikes">Bikes</a></li>
+        <li class="crumb"><a href="bikes/bmx">BMX</a></li>
+
+        <li class="crumb">Jump Bike 3000</li>
+      </ol>
+    </nav>
+  </body>
+</html>

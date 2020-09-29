@@ -1,0 +1,58 @@
+<!-- 
+  inline 은 높이와 너비를 가질 수 없음. 따라서 block 으로 변경 할 때,
+  inline - block을 통해서 변경하면 높이와 너비를 가질 수 있게됨. 하지만 inline - block을 별로임. 
+  default 된 값도 잘 알지 못하고, 잘 모르는 오류들이 많음
+   -> 반응형 디자인을 반영하지 않음 (각기 다른 디바이스 별로 설정을 신경쓰지 않음)
+
+   위와 같은 문제 해결을 위해 flexbox라는 형태 이용
+   1. 자식 element에는 어떤 것도 적으면 안됨. (부모에만 적어야 함) -> 상위 박스를 flex container로 만들면 됨.(display:flex)
+   2. main axis (justify-content, 기본 값이 수평)
+   3. cross axis(align-item,기본 값이 수직)
+
+   flex-direction (flexbox의 가로축과 세로축을 변경 해줌.)
+   dispaly:flex 했을때 기본값 -> row / column으로 변경 시 반전 일어남.
+
+   + div 안에 content가 없을 때는 div 자체가 flexbox의 부모가 될 수 없지만, div 안에 content가 존재한다면,
+   div 자체가 flexbox container가 되어서 div 안에 있는 content들의 위치를 변경할 수 있음.
+
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        height: 100vh; /* vh: veiw height 화면의 몇%를 채우는 값이냐 */
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        /* flex-direction: column; */
+        align-items: center; /* 수직으로 중간을 맞춘다. 하지만, 부모 박스에 높이가 지정되어 있지 않다면, 높이를 지정해 줘야 변화 탐지 가능 */
+        flex-wrap: wrap; /* 기본값은 nowrap으로 존재. 하지만 wrap으로 변경하면, 각각의 box들이 겹치지 않고, 분리가 됨. */
+        flex-direction: row; /* 기본 값은 row / box들이 나타나는 값들의 방향을 설정 */
+      }
+      div {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        background-color: seagreen;
+        font-size: 20px;
+        justify-content: right;
+        align-items: center;
+        color: white;
+      }
+      #second {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        background-color: silver;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>1</div>
+    <div id="second">2</div>
+    <div>3</div>
+  </body>
+</html>

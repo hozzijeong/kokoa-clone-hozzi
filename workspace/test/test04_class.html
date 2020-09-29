@@ -1,0 +1,51 @@
+<!-- 
+    inline 은 높이와 너미가 없다 -> margin 값에서 상/하 값을 주지 못한다
+    따라서 inline에 margin 값을 주기 위해서는 inline 을 block으로 변경해야 한다. 
+    (display를 통해 변경 가능)
+
+    하지만 inline은 padding 값을 가질 수 있다. 
+
+    class
+    .className 으로 접근함
+    #은 ID로 접근하는 방식
+    ID는 유일하게 사용되지만, class는 유일하게 사용 될 필요가 없음
+    한 개의 박스에서 여러가지 클래스를 가질 수 도 있음. 
+    하지만 id 는 한꺼번에 여러개를 가질 수 없음. 
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test04</title>
+    <style>
+      body {
+        margin: 20px;
+      }
+
+      span {
+        background-color: brown;
+      }
+
+      .red {
+        background-color: red;
+      }
+      .cyan {
+        background-color: cyan;
+      }
+      .size {
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="size red"> helloworld </span>
+    <span class="size cyan"> helloworld </span>
+    <span class="size red"> helloworld </span>
+    <span class="size cyan"> helloworld </span>
+    <span class="size red"> helloworld </span>
+    <span class="size cyan"> helloworld </span>
+  </body>
+</html>
