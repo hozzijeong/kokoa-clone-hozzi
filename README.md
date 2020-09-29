@@ -1,3 +1,3 @@
 # Kokoa Clone By Hozzi
 
-CSS got so much better
+My First HTML&CSS Project
