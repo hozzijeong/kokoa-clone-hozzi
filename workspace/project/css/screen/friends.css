@@ -50,3 +50,5 @@
   animation: hidesplashscreen 0.4s ease-in-out forwards;
   animation-delay: 1.4s;
 }
+
+/* forward는 마지막 애니메이션 동작을 */
