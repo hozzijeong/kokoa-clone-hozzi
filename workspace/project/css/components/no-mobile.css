@@ -2,6 +2,7 @@
   position: absolute;
   z-index: 99;
   height: 100vh;
+<<<<<<< Updated upstream
   background-color: var(--yellow);
   width: 100vw;
   display: flex;
@@ -9,6 +10,15 @@
   align-items: center;
   font-size: 32px;
   top: 0;
+=======
+  width: 100vw;
+  background-color: var(--yellow);
+  display: flex;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+>>>>>>> Stashed changes
 }
 
 @media screen and (max-width: 645px) {
